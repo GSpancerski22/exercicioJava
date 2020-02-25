@@ -22,22 +22,23 @@ public class Usuario {
     //criar uma const 
     do {
         Funcionario f = new Funcionario();
+        Pagamento p = new Pagamento();
         ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
         System.out.println(" ");
         decissao = sc.nextInt();
         
+
+
+        
         switch (decissao){
             case 1 :
-                System.out.println("Cadastre um funcionario");
-                funcionarios.add("kjbkjb", 12, "budsidbi");
-                
-                f.setCargo("Gerente");
-                f.setIdade(31);
-                f.setNome("kjafej");
+                f.cadastro("Jaiuson", 33, "Pai de familia");
+                funcionarios.add(f);
                 
                 break;
             case 2: 
                 System.out.println("Efetuar pagamento");
+                p.folhaDePagamento(1.330);
                 
                 break;
             case 3: 

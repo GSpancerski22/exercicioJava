@@ -3,7 +3,7 @@ package atividade2102;
 
 
 public class Pagamento {
-   public void olhaDePagamento(double salBruto){
+   public void folhaDePagamento(double salBruto){
        double salDes;
        double des;
      if(salBruto <= 1.751){
@@ -17,12 +17,13 @@ public class Pagamento {
      }else {
          salDes = salBruto - 652; 
              
-     }
+     } 
+         System.out.println("Seu salario é " + salDes  );
     } 
-   public void decimoTerceiro(salBruto){
+   public void decimoTerceiro(double salBruto){
        
     }
-   public void ferias(slaBruto){
+   public void ferias(double salBruto){
    }
    
 }
