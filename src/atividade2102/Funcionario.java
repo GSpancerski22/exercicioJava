@@ -6,10 +6,10 @@ public class Funcionario {
     private int idade;
     private String cargo;
     
-    public void cadastro(String name, int idade, String cargo){
-        this.setCargo(cargo);
-        this.setIdade(idade);
-        this.setNome(name);
+    public Funcionario (String nome, int idade, String cargo){
+        this.cargo = cargo;
+        this.idade = idade;
+        this.nome  = nome;
     }
 
     public String getNome() {

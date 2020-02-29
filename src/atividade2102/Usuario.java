@@ -17,28 +17,39 @@ public class Usuario {
     public static void main (String[] args){
         Scanner sc = new Scanner(System.in);
           
-    int sair = 0;
     int decissao;
-    //criar uma const 
-    do {
-        Funcionario f = new Funcionario();
         Pagamento p = new Pagamento();
         ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
-        System.out.println(" ");
+    do {
+        System.out.print("1 - Para Cadastra");
+        System.out.print(" 2 - Para Efetuar Pagamento");
+        System.out.println(" 3 - Logout");
         decissao = sc.nextInt();
-        
-
-
         
         switch (decissao){
             case 1 :
-                f.cadastro("Jaiuson", 33, "Pai de familia");
-                funcionarios.add(f);
+                funcionarios.add(0,new Funcionario("Jailson Mendes da Silva", 33, "gerente"));
+                funcionarios.add(1,new Funcionario("Jailson Mendes", 33, "gerente"));
                 
-                break;
+                System.out.println("Funcionário " + funcionarios.get(0).getNome() +" cadastrado com sucesso !");
+//                funcionarios.forEach( e -> {
+//                    System.out.println(
+//                    e.getCargo() + " - " +
+//                    e.getIdade() + " - " +
+//                    e.getNome()
+//                    );
+//                });
+
+            break;
             case 2: 
-                System.out.println("Efetuar pagamento");
-                p.folhaDePagamento(1.330);
+                if (decissao == 1){
+                    System.out.println("Efetuar pagamento");
+                    p.folhaDePagamento(2000);
+                }else if (decissao == 2){
+                    System.out.println("");
+                }else if(decissao == 3) {
+                    System.out.println("saf");
+                }
                 
                 break;
             case 3: 
@@ -48,9 +59,9 @@ public class Usuario {
             
             
         
-    }while (decissao !=  3);
-    
+    }while (decissao ==  1 || decissao == 2);
     
     }
 }
+
   
